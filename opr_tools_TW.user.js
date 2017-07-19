@@ -70,7 +70,7 @@ let STRINGS = {
     percent_processed: "Percent Processed"
 
 };
-const STRINGS_CN = {
+const STRINGS_TW = {
     baidu: "百度地圖",
     tencent: "騰訊地圖",
     bdstreetview: "百度街景",
