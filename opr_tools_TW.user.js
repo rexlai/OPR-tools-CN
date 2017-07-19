@@ -511,7 +511,7 @@ color:#00FFFF;
             a.className = "button btn btn-default pull-right";
             a.target = 'translate';
             a.style.padding = '0px 4px';
-            a.href = "https://translate.google.com/#auto/en/" + content;
+            a.href = "https://translate.google.com/#auto/zh-TW/" + content;
             link.insertAdjacentElement("afterend", a);
 
             const description = w.document.querySelector("#descriptionDiv").innerHTML.split("<br>")[3].trim();
