@@ -664,8 +664,8 @@ color:#00FFFF;
 }
 
 window.addEventListener('load', function () {
-    if (navigator.language === "zh-CN")
-        STRINGS = STRINGS_CN;
+    if (navigator.language === "zh-TW")
+        STRINGS = STRINGS_TW;
     if (document.querySelector("[src*='all-min']")) {
         init();
     }
