@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         OPR tools CN
-// @version      1.0.4
+// @name         OPR tools TW
+// @version      1.0.4.1
 // @description  Add links to maps, rate on common objects, and other small improvements
 // @author       CubicPill
 // @match        https://opr.ingress.com/recon
@@ -71,34 +71,34 @@ let STRINGS = {
 
 };
 const STRINGS_CN = {
-    baidu: "百度地图",
-    tencent: "腾讯地图",
+    baidu: "百度地圖",
+    tencent: "騰訊地圖",
     bdstreetview: "百度街景",
-    photo: "低质量图片",
-    private: "封闭区域",
-    dup: "重复",
-    school: "中小学",
-    face: "人脸",
-    temporary: "临时景观",
-    location: "位置不准确",
-    agent: "标题包含 Codename",
-    apartment: "小区招牌",
-    cemetery: "墓园",
+    photo: "低質素圖片",
+    private: "禁區",
+    dup: "重複",
+    school: "學校",
+    face: "臉孔",
+    temporary: "臨時裝飾",
+    location: "位置不乎",
+    agent: "標題包含 Codename",
+    apartment: "公寓/住宅",
+    cemetery: "墳場",
     street_sign: "路牌",
     fire_dept: "消防局",
-    hospital: "医院",
+    hospital: "醫院",
     hotel: "酒店",
-    exercise: "健身器材",
-    post: "邮局",
-    survey_marker: "测量地标",
+    exercise: "健身設施",
+    post: "郵局",
+    survey_marker: "測量地標",
     water_tower: "水塔",
-    fountain: "喷泉",
-    gazebo: "亭子",
-    mt_marker: "山顶标记",
-    playground: "运动场",
-    ruin: "遗址",
-    trail_mk: "步道路标",
-    percent_processed: "已处理的百分比"
+    fountain: "噴泉",
+    gazebo: "休憩亭",
+    mt_marker: "標高柱",
+    playground: "遊樂場",
+    ruin: "遺跡",
+    trail_mk: "標距柱",
+    percent_processed: "已處理的百分比"
 };
 const PORTAL_MARKER = "data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAAd0SU1FB+EHEAccLVUS/qUAAAI0SURBVDjLldTNa55VEAXw39zniTGRqvEDUqOLiEGKKEELbcS9IG79AxSJqCju3MZ/oNhFwFZtEZeKS1FKXRgRLVK6qSVoGkWbCkbRlHy8b/I+46K3sYg1eJZ35p4599yZCf9AfoH3NQZuUrRCCzo72NHo6xnESRJR77WQs8TxevKeceEx4TCmpEkQfsCSzleGfJOsBPIZ4oO/CeULijCGV3RekkaEgnItReqETbyt86ZFq7Gg21VU0yZ1jgozGBbOS5eE1Upyl3APHpJeVBx0wGsWfAuRiVkTilnpdfwpfC19h560U3W3OkMaUzqHhDuFI1rz5v3UzK1r9T0pvSHcjNM4j00MhHTV14GwjVVsCFPSI9IFj1os1tyCGaGVzgoXse3G2MEyzgpFelyxrwjDeBADLEtb9kLoScvoC5PCSJGG8QA6rEgDe6MTLmNLZ0XqlWpk4/8j0QqHdG4t1cCfhcDYdX3zXxSBO6qAdY1BMaQvLUkN7q1NuJdHRZpAK32PzeJ36zhT60zjvj2e2mBCmK7FzwhXio/0tT4XPsbdmKnVyr8oCezHDMYVp7Q+86uNNjZlXrJowryBg7hfGJXOKS7r/FZJxqT9mMa4dBFvCRfiQxnXpjdfNWrLE3gWT0sbdUB7Vc8wRjAqfKpzQmch3nUlZ+v058vE/O4WeBhPSYdrf01Woh+lJXyp+CSOOQf5PPHOdWtk92efU4zYZ9s4bpduq6E16Q+NX7AWx3Q5R8xdDf4FFQPK0NE5za8AAAAASUVORK5CYII=";
 function addGlobalStyle(css) {
@@ -511,7 +511,7 @@ color:#00FFFF;
             a.className = "button btn btn-default pull-right";
             a.target = 'translate';
             a.style.padding = '0px 4px';
-            a.href = "https://translate.google.com/#auto/zh-CN/" + content;
+            a.href = "https://translate.google.com/#auto/zh-TW/" + content;
             link.insertAdjacentElement("afterend", a);
 
             const description = w.document.querySelector("#descriptionDiv").innerHTML.split("<br>")[3].trim();
